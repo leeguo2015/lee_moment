@@ -1,9 +1,9 @@
 package main
 
 import (
-	"lee_moment/app/web"
+	"lee_moment/lee_api"
 )
 
 func main() {
-	web.StartServer()
+	lee_api.StartServer()
 }
