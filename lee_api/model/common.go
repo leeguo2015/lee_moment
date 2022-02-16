@@ -8,19 +8,19 @@ import (
 	"gorm.io/gorm"
 )
 
-// Model 定义
-type Model struct {
-	ID          uint      `gorm:"primary_key; <-:create; autoIncrement"`
-	CreatedTime time.Time `json:"created_time; autoCreateTime"`
-	UpdatedTime time.Time `json:"updated_time; autoUpdateTime"`
-	DeletedTime time.Time `json:"deleted_time"`
-}
+//// Model 定义
+//type Model struct {
+//	ID          uint      `gorm:"primary_key; <-:create; autoIncrement"`
+//	CreatedTime time.Time `json:"created_time; autoCreateTime"`
+//	UpdatedTime time.Time `json:"updated_time; autoUpdateTime"`
+//	DeletedTime time.Time `json:"deleted_time"`
+//}
 
 // 初始化
 func init() {
 	var err error
 	var constr string
-	constr = fmt.Sprintf("%s:%s@(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", "root", "123456", "47.108.140.163", 8166, "gin_test")
+	constr = fmt.Sprintf("%s:%s@(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", "root", "PaQ2dzU91fFhXkEZ", "82.157.146.190", 33066, "lee_moment")
 	//constr = fmt.Sprintf("%s:%s@(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", "root", "123456", "127.0.0.1", 3306, "lee")
 	db, err = gorm.Open(mysql.Open(constr), &gorm.Config{})
 	if err != nil {

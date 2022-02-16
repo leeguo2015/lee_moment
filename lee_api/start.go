@@ -15,9 +15,7 @@ func StartServer() {
 			"data":    nil,
 		})
 	})
-	//404 Handler.
 	r.NoRoute(func(c *gin.Context) {
-		//c.String(http.StatusNotFound, "the incorrect API route.")
 		{
 			c.JSON(http.StatusOK, gin.H{
 				"status":  400,
@@ -26,7 +24,7 @@ func StartServer() {
 			})
 		}
 	})
-	ApiHandler := r.Group("/lee_api/vi")
+	ApiHandler := r.Group("/api/v1")
 	url.ApiInclude(ApiHandler)
-	_ = r.Run(":8000")
+	_ = r.Run(":25380")
 }
