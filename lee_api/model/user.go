@@ -48,19 +48,29 @@ type (
 
 // relationship
 type (
+	// RelateBlue 关注名单
 	RelateBlue struct {
 		gorm.Model
-		UserId int
-		PeerId int
+		UserId User `gorm:"foreignkey:UserRefer"`
+		PeerId User `gorm:"foreignkey:UserRefer"`
 	}
+	// RelateBlack 黑名单
 	RelateBlack struct {
 		gorm.Model
-		UserId int
-		PeerId int
+		UserId User `gorm:"foreignkey:UserRefer"`
+		PeerId User `gorm:"foreignkey:UserRefer"`
 	}
+
+	// RelatePick 好友名单
 	RelatePick struct {
 		gorm.Model
-		UserId int
-		PeerId int
+		UserId User `gorm:"foreignkey:UserRefer"`
+		PeerId User `gorm:"foreignkey:UserRefer"`
+	}
+	RelatePickApply struct {
+		gorm.Model
+		UserId User `gorm:"foreignkey:UserRefer"`
+		PeerId User `gorm:"foreignkey:UserRefer"`
+		Status int  // 申请状态 0申请中, 1申请通过, 2,申请失败.
 	}
 )
