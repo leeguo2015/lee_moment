@@ -17,7 +17,22 @@ type (
 
 	Blog struct {
 		gorm.Model
-		Uuid   string `json:"uuid" gorm:"column:uuid;type:varchar(100);"`
-		UserId User   `gorm:"foreignkey:UserRefer"`
+		Uuid            string `json:"uuid" gorm:"column:uuid;type:varchar(100);"`
+		UserId          User   `gorm:"foreignkey:UserRefer"`
+		Title           string
+		Content         string
+		CountRemake     int
+		CountLike       int
+		CountCollecting int
+		CountRead       int
+	}
+)
+
+type (
+	Remake struct {
+		gorm.Model
+		User    User
+		Content string
+		Like    string
 	}
 )
