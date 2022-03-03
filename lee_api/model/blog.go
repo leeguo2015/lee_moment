@@ -35,4 +35,9 @@ type (
 		Content string
 		Like    string
 	}
+	Like struct {
+		gorm.Model
+		User User
+		Like string
+	}
 )
