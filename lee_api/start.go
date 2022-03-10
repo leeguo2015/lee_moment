@@ -26,5 +26,5 @@ func StartServer() {
 	})
 	ApiHandler := r.Group("/api/v1")
 	url.ApiInclude(ApiHandler)
-	_ = r.Run(":25380")
+	_ = r.Run(":80")
 }

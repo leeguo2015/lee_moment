@@ -1,1 +1,0 @@
-This is web project of lee_moment, use VUE frame.
