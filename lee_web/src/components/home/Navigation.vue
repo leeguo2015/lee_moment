@@ -1,16 +1,13 @@
 <template>
-  <div>
+  <div id="lee-menu">
     <el-menu
-        :default-active="activeIndex2"
-        class="el-menu-demo"
         mode="horizontal"
         background-color="#"
         text-color="#fff"
-        active-text-color=""
-        @select="handleSelect"
+        active-text-color="#fff"
     >
       <el-menu-item index="1">Home</el-menu-item>
-      <el-menu-item index="2">Processing Center</el-menu-item>
+      <el-menu-item index="2">Personal Center</el-menu-item>
 <!--      <el-sub-menu index="2">-->
 <!--        <template #title>Workspace</template>-->
 <!--        <el-menu-item index="2-1">item one</el-menu-item>-->
@@ -40,5 +37,9 @@ name: "Navigation",
 </script>
 
 <style scoped>
+#lee-menu{
+  width: 100%;
+}
+
 
 </style>
